@@ -1,15 +1,4 @@
-# typescript-webserver
-
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.13. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### Typescript webserver
+This is a minimal Typescript webserver. It will respond to "GET /" requests with the text "Hello World!". This is made using express.
+It will use the default port provided by Railway, or 3000 if it isn't set.
+Once the template is used to create a project, it will automatically start without extra configuration required.
