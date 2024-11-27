@@ -75,7 +75,7 @@ async function incrementClicks() {
         setTimeout(() => {
             avaImage.classList.remove('pop-animation');
             avaImage.src = 'images/ava-close.png';
-        }, 100);
+        }, 250);
 
         // Send click data to the backend
         const response = await fetch('/api/clicks', {
