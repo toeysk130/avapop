@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the AVA!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 50px;
+            background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+            animation: background-shift 10s infinite alternate;
+            color: #444;
+        }
+
+        @keyframes background-shift {
+            from {
+                background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+            }
+            to {
+                background: linear-gradient(to bottom right, #fcb69f, #ff6f61);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6f61;
+        }
+
+        #ava-image {
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        #ava-image:hover {
+            transform: scale(1.1);
+        }
+
+        #fire-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        #click-count {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .contract-banner {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: #ff6f61;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contract-banner:hover {
+            background: #ffe8e6;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+<style>
+    #fire-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .fire-ring {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 5px solid rgba(255, 69, 0, 0.8);
+        border-radius: 50%;
+        animation: ring-burst 1s ease-out forwards;
+        opacity: 0.8;
+    }
+
+    .fire-particle {
+        position: absolute;
+        background: radial-gradient(circle, rgba(255, 165, 0, 1), rgba(255, 69, 0, 0.8));
+        border-radius: 50%;
+        animation: particle-burst 1s ease-out forwards;
+    }
+
+    @keyframes ring-burst {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
+
+    @keyframes particle-burst {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(0, 0) scale(0);
+            opacity: 0;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>Click the AVA!</h1>
+
+    <div id="fire-effect"></div>
+    <img id="ava-image" src="images/ava-close.png" alt="ava" />
+    <div id="click-count">Clicks: 0</div>
+
+    <div class="contract-banner">
+        Contract Address:<br>
+        CBMBvr4Xtxx8MSw44UAZoCoW8enCgKsfnxbS6Ad7pump
+    </div>
+
+    <footer>
+        Created with ❤️ by AVA Lover |
+        <a href="https://pump.fun/coin/CBMBvr4Xtxx8MSw44UAZoCoW8enCgKsfnxbS6Ad7pump" target="_blank">Buy $AVAPOP</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
