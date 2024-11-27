@@ -1,5 +1,5 @@
 {
-    "name": "typescript-webserver",
+    "name": "ava-pop",
     "module": "index.ts",
     "type": "module",
     "scripts": {
