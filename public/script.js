@@ -98,7 +98,21 @@ async function incrementClicks() {
 }
 
 // Attach event listener to AVA image
-avaImage.addEventListener('click', incrementClicks);
+avaImage.addEventListener('click', async () => {
+    try {
+        console.log('Switching image to open...');
+        avaImage.src = 'images/ava-open.png';
+
+        // Switch back after a delay
+        setTimeout(() => {
+            console.log('Switching image back to close...');
+            avaImage.src = 'images/ava-close.png';
+        }, 200);
+    } catch (error) {
+        console.error('Error switching images:', error);
+    }
+});
+
 
 // Fetch clicks on page load
 fetchClicks();
